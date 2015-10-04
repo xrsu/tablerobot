@@ -48,5 +48,14 @@ public class PlayTest {
 		Assert.assertEquals(expected, play.getRobotInfo().toString());
 	}
 	
-	
+	@Test
+	public void testCase4(){
+		System.out.println("start testCase 4: PLACE 0,0,SOUTH \r\n");
+		String expected = "0, 0, SOUTH";
+		play.executeCommand("PLACE 0,0,SOUTH");
+		play.executeCommand("MOVE");
+		play.executeCommand("MOVE");
+		play.executeCommand("REPORT");
+		Assert.assertEquals(expected, play.getRobotInfo().toString());
+	}
 }

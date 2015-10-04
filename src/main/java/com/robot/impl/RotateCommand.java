@@ -1,24 +1,19 @@
 package com.robot.impl;
 
 import com.robot.Command;
-import com.robot.ICommand;
 import com.robot.IRotate;
 import com.robot.RobotInfo;
 import com.robot.RotateFactory;
 
-public class RotateCommand implements ICommand {
+public class RotateCommand extends AbstractCommand {
 	
-private RobotInfo robotInfo = null;
-private Command command;
 	
 	public RotateCommand(Command command,RobotInfo robotInfo){
-		this.robotInfo = robotInfo;
-		this.command = command;
+		super(command,robotInfo);
 	}
 
 	@Override
-	public void execute() {
-		
+	public void executeAction() {		
 		IRotate rotate = null;
 		rotate = RotateFactory.getInstance(command, robotInfo);
 		if(rotate!=null){
@@ -28,3 +23,4 @@ private Command command;
 	}
 
 }
+

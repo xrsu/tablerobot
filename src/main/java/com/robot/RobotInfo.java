@@ -3,7 +3,7 @@ package com.robot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RobotInfo {
+public class RobotInfo implements Cloneable{
 
 	private int x;
 	private int y;
@@ -71,5 +71,15 @@ public class RobotInfo {
 	}
 	public String toString(){
 		return String.format("%s, %s, %s", x, y, facing);
+	}
+	
+	public RobotInfo clone() {
+		RobotInfo o = null;
+		try {
+			o = (RobotInfo) super.clone();
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+		return o;
 	}
 }

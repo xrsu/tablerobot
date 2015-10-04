@@ -5,6 +5,7 @@ import com.robot.impl.RotateRight;
 
 public class RotateFactory {
 
+	@SuppressWarnings("incomplete-switch")
 	public static IRotate getInstance(Command rotateDirection,RobotInfo robotInfo){
 		
 		IRotate rotate = null;

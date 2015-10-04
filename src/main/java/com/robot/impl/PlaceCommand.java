@@ -6,26 +6,30 @@
 package com.robot.impl;
 
 import com.robot.Command;
-import com.robot.Constants;
 import com.robot.Facing;
-import com.robot.ICommand;
 import com.robot.RobotInfo;
 import com.robot.Utils;
 
-public class PlaceCommand implements ICommand {
+public class PlaceCommand extends AbstractCommand {
 	
 	private RobotInfo robotInfo;
+	@SuppressWarnings("unused")
 	private Command command;
 	private String initParams;
+	
+	public PlaceCommand(Command command,RobotInfo robotInfo){
+		super(command,robotInfo);
+	}
 		
 		public PlaceCommand(Command command, String initParams, RobotInfo robotInfo){
+			super(command,robotInfo);
 			this.robotInfo = robotInfo;
 			this.command = command;
 			this.initParams = initParams;
 		}
 
 	@Override
-	public void execute() {
+	public void executeAction() {
 		
 		String initParamArray[] = initParams.split(",");
 		if(validateParams(initParamArray)){

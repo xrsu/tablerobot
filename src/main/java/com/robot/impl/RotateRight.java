@@ -1,6 +1,5 @@
 package com.robot.impl;
 
-import com.robot.Constants;
 import com.robot.Facing;
 import com.robot.IRotate;
 import com.robot.RobotInfo;

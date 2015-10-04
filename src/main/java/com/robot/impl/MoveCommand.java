@@ -1,24 +1,19 @@
 package com.robot.impl;
 
 import com.robot.Command;
-import com.robot.ICommand;
 import com.robot.IMove;
 import com.robot.MoveFactory;
 import com.robot.RobotInfo;
 
-public class MoveCommand implements ICommand {
+public class MoveCommand extends AbstractCommand {
 	
-	private RobotInfo robotInfo = null;
-	@SuppressWarnings("unused")
-	private Command command = null;
 	
 	public MoveCommand(Command command,RobotInfo robotInfo){
-		this.robotInfo = robotInfo;
-		this.command = command;
+		super(command,robotInfo);
 	}
 
 	@Override
-	public void execute() {
+	public void executeAction() {
 		// TODO Auto-generated method stub
 		IMove move = MoveFactory.getInstance(robotInfo);
 		if(move!=null){
@@ -27,3 +22,4 @@ public class MoveCommand implements ICommand {
 	}
 
 }
+

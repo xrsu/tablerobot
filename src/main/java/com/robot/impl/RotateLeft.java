@@ -1,10 +1,9 @@
 package com.robot.impl;
 
-import com.robot.Constants;
+import com.robot.Facing;
 import com.robot.IRotate;
 import com.robot.RobotInfo;
 import com.robot.Utils;
-import com.robot.Facing;
 
 public class RotateLeft implements IRotate {
 	
