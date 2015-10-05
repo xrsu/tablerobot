@@ -77,6 +77,11 @@ public class RobotInfo implements Cloneable{
 		RobotInfo o = null;
 		try {
 			o = (RobotInfo) super.clone();
+			for (Facing f : Facing.values()){
+				if(this.facing == f){
+					o.facing = f;
+				}
+			}
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}

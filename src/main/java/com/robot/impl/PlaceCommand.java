@@ -65,7 +65,7 @@ public class PlaceCommand extends AbstractCommand {
 	private boolean validateUnitParam(String unit){
 		if(Utils.isNumeric(unit)){
 			int x = Integer.parseInt(unit);
-			if(x <= robotInfo.getMaxUnits()){
+			if(x < robotInfo.getMaxUnits()&&x>-1){
 				return true;
 			}
 			else{

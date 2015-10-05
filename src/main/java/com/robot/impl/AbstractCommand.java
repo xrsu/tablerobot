@@ -41,10 +41,10 @@ public abstract class AbstractCommand implements ICommand {
 	 * @param command
 	 */
 	protected boolean isOutofTable(RobotInfo robotInfo) {
-		if (robotInfo.getX() < 0 || robotInfo.getX() > robotInfo.getMaxUnits()) {
+		if (robotInfo.getX() < 0 || robotInfo.getX() >= robotInfo.getMaxUnits()) {
 			return true;
 		}
-		if (robotInfo.getY() < 0 || robotInfo.getY() > robotInfo.getMaxUnits()) {
+		if (robotInfo.getY() < 0 || robotInfo.getY() >= robotInfo.getMaxUnits()) {
 			return true;
 		}
 		return false;

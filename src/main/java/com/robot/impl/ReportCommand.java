@@ -1,22 +1,16 @@
 package com.robot.impl;
 
 import com.robot.Command;
-import com.robot.ICommand;
 import com.robot.RobotInfo;
 
-public class ReportCommand implements ICommand {
-
-	private RobotInfo robotInfo = null;
-	@SuppressWarnings("unused")
-	private Command command;
+public class ReportCommand extends AbstractCommand {
 
 	public ReportCommand(Command command, RobotInfo robotInfo) {
-		this.robotInfo = robotInfo;
-		this.command = command;
+		super(command,robotInfo);
 	}
 
 	@Override
-	public void execute() {
+	public void executeAction() {
 		// TODO Auto-generated method stub
 		System.out.println(String.format("Output: %s", robotInfo));
 	}

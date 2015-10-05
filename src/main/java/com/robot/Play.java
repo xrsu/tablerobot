@@ -13,8 +13,8 @@ public class Play {
 	
 	public Play(){
 		robotInfo = new RobotInfo();
-		robotInfo.setX(0);
-		robotInfo.setY(0);
+		robotInfo.setX(-1);
+		robotInfo.setY(-1);
 		robotInfo.setMaxUnits(Constants.MAX_UNITS);
 	}
 	
