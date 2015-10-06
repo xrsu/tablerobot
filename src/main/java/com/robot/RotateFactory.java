@@ -8,10 +8,11 @@ import com.robot.impl.RotateRightD;
 public class RotateFactory {
 
 	@SuppressWarnings("incomplete-switch")
-	public static IRotate getInstance(Command rotateDirection,RobotInfo robotInfo){
-		
+	public static IRotate getInstance(Command rotateDirection,
+			RobotInfo robotInfo) {
+
 		IRotate rotate = null;
-		switch(rotateDirection){
+		switch (rotateDirection) {
 		case LEFT:
 			rotate = new RotateLeft(robotInfo);
 			break;
@@ -25,7 +26,7 @@ public class RotateFactory {
 			rotate = new RotateRightD(robotInfo);
 			break;
 		}
-		
+
 		return rotate;
 	}
 }

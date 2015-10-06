@@ -1,6 +1,5 @@
 package com.robot;
 
-
 public class Constants {
 	/*
 	 * size of the table

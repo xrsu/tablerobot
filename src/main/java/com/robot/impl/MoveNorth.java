@@ -4,10 +4,10 @@ import com.robot.IMove;
 import com.robot.RobotInfo;
 
 public class MoveNorth implements IMove {
-	
+
 	private RobotInfo robotInfo;
-	
-	public MoveNorth(RobotInfo robotInfo){
+
+	public MoveNorth(RobotInfo robotInfo) {
 		this.robotInfo = robotInfo;
 	}
 

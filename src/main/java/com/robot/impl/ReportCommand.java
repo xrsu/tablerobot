@@ -6,7 +6,7 @@ import com.robot.RobotInfo;
 public class ReportCommand extends AbstractCommand {
 
 	public ReportCommand(Command command, RobotInfo robotInfo) {
-		super(command,robotInfo);
+		super(command, robotInfo);
 	}
 
 	@Override

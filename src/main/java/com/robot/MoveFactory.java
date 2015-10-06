@@ -11,22 +11,22 @@ import com.robot.impl.MoveWest;
 
 public class MoveFactory {
 
-	public static IMove getInstance(RobotInfo robotInfo){		
+	public static IMove getInstance(RobotInfo robotInfo) {
 		IMove move = null;
-		switch(robotInfo.getFacing()){
+		switch (robotInfo.getFacing()) {
 		case WEST:
-				move = new MoveWest(robotInfo);
+			move = new MoveWest(robotInfo);
 			break;
 		case EAST:
-				move = new MoveEast(robotInfo);
-				break;
+			move = new MoveEast(robotInfo);
+			break;
 		case NORTH:
-				move = new MoveNorth(robotInfo);
-				break;
+			move = new MoveNorth(robotInfo);
+			break;
 		case SOUTH:
-				move = new MoveSouth(robotInfo);
-				break;
-				//expand in part2
+			move = new MoveSouth(robotInfo);
+			break;
+		// expand in part2
 		case NORTHEAST:
 			move = new MoveNorthEast(robotInfo);
 			break;
@@ -39,7 +39,7 @@ public class MoveFactory {
 		case SOUTHWEST:
 			move = new MoveSouthWest(robotInfo);
 			break;
-				
+
 		}
 		return move;
 	}
