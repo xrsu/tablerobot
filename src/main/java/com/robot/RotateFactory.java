@@ -1,7 +1,9 @@
 package com.robot;
 
 import com.robot.impl.RotateLeft;
+import com.robot.impl.RotateLeftD;
 import com.robot.impl.RotateRight;
+import com.robot.impl.RotateRightD;
 
 public class RotateFactory {
 
@@ -15,6 +17,12 @@ public class RotateFactory {
 			break;
 		case RIGHT:
 			rotate = new RotateRight(robotInfo);
+			break;
+		case LEFTD:
+			rotate = new RotateLeftD(robotInfo);
+			break;
+		case RIGHTD:
+			rotate = new RotateRightD(robotInfo);
 			break;
 		}
 		

@@ -1,7 +1,6 @@
 package com.robot;
 
 import org.junit.Assert;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -56,6 +55,26 @@ public class PlayTest {
 		play.executeCommand("MOVE");
 		play.executeCommand("MOVE");
 		play.executeCommand("REPORT");
+		Assert.assertEquals(expected, play.getRobotInfo().toString());
+	}
+	
+	@Test
+	public void testCase5(){
+		System.out.println("start testCase 1: PLACE 1,2,EAST \r\n");
+		
+		String expected = "3, 5, NORTH";
+		
+		play.executeCommand("PLACE 1,2,EAST");
+		play.executeCommand("MOVE");
+		play.executeCommand("MOVE");
+		play.executeCommand("LEFTD");
+		play.executeCommand("MOVE");
+		play.executeCommand("LEFT");
+		play.executeCommand("MOVE");
+		play.executeCommand("RIGHTD");
+		play.executeCommand("MOVE");
+		play.executeCommand("REPORT");
+		
 		Assert.assertEquals(expected, play.getRobotInfo().toString());
 	}
 }

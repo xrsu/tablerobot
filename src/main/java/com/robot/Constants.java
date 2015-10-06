@@ -5,6 +5,6 @@ public class Constants {
 	/*
 	 * size of the table
 	 */
-	public static int MAX_UNITS = 5;
+	public static int MAX_UNITS = 8;
 
 }

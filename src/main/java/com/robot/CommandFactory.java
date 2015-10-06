@@ -20,6 +20,8 @@ public class CommandFactory {
 		switch(command){
 		case LEFT:
 		case RIGHT:
+		case LEFTD:
+		case RIGHTD:
 			commandInst = new RotateCommand(command, robotInfo);
 			break;
 		case MOVE:
